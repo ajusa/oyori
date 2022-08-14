@@ -1,0 +1,28 @@
+---
+- id: 0
+  title: Hello World!
+  author: Just me
+  date: 08/13/2022
+  content: |
+    ### Here is my custom markdown
+    Welcome to this post
+
+    **italics**
+
+    *bold*
+
+    How does that look?
+
+- id: 1
+  title: My second post
+  author: Just me
+  date: 08/14/2022
+  content: |
+    ### Here is my custom markdown
+    Welcome to this post
+
+    **italics**
+
+    *bold*
+
+    How does that look?

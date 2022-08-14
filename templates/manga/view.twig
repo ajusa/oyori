@@ -1,0 +1,24 @@
+{% const showLink = false %}
+{% importnimja "templates/manga/card.twig" %}
+<div class="space"></div>
+<table class="border medium-space">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for i in countdown(manga.links.high, 0) %}
+			{% var link = manga.links[i] %}
+			<tr>
+				<td>{{link.name}}</td>
+				<td>
+					<nav class="right-align">
+						<a class="button none m l" href="{{link.url.toDownloadUrl}}">Download</a>
+					</nav>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>

@@ -1,0 +1,115 @@
+---
+- id: 0
+  title: One Piece
+  status: ongoing
+  thumbnail: https://upload.wikimedia.org/wikipedia/en/9/90/One_Piece%2C_Volume_61_Cover_%28Japanese%29.jpg
+  group: My translation Group
+  description: luffy goes on an adventure
+  nextRelease: 25/08/2022
+  links:
+    - 
+      name: Volume 1
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+    - 
+      name: Volume 2
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+- id: 2
+  title: One Punch Man
+  status: ongoing
+  thumbnail: https://upload.wikimedia.org/wikipedia/en/c/c3/OnePunchMan_manga_cover.png
+  group: Other translation group
+  description: Saitama is bored
+  nextRelease: 28/08/2022
+  links:
+    - 
+      name: Volume 1
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+    - 
+      name: Volume 2
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+- id: 3
+  title: One Piece
+  status: ongoing
+  thumbnail: https://upload.wikimedia.org/wikipedia/en/9/90/One_Piece%2C_Volume_61_Cover_%28Japanese%29.jpg
+  group: My translation Group
+  description: luffy goes on an adventure
+  nextRelease: 25/08/2022
+  links:
+    - 
+      name: Volume 1
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+    - 
+      name: Volume 2
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+- id: 4
+  title: One Punch Man
+  status: ongoing
+  thumbnail: https://upload.wikimedia.org/wikipedia/en/c/c3/OnePunchMan_manga_cover.png
+  group: Other translation group
+  description: Saitama is bored
+  nextRelease: 28/08/2022
+  links:
+    - 
+      name: Volume 1
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+    - 
+      name: Volume 2
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+
+- id: 5
+  title: One Piece
+  status: ongoing
+  thumbnail: https://upload.wikimedia.org/wikipedia/en/9/90/One_Piece%2C_Volume_61_Cover_%28Japanese%29.jpg
+  group: My translation Group
+  description: luffy goes on an adventure
+  nextRelease: 25/08/2022
+  links:
+    - 
+      name: Volume 1
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+    - 
+      name: Volume 2
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+- id: 6
+  title: One Punch Man
+  status: ongoing
+  thumbnail: https://upload.wikimedia.org/wikipedia/en/c/c3/OnePunchMan_manga_cover.png
+  group: Other translation group
+  description: Saitama is bored
+  nextRelease: 28/08/2022
+  links:
+    - 
+      name: Volume 1
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+    - 
+      name: Volume 2
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+
+- id: 7
+  title: One Piece
+  status: ongoing
+  thumbnail: https://upload.wikimedia.org/wikipedia/en/9/90/One_Piece%2C_Volume_61_Cover_%28Japanese%29.jpg
+  group: My translation Group
+  description: luffy goes on an adventure
+  nextRelease: 25/08/2022
+  links:
+    - 
+      name: Volume 1
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+    - 
+      name: Volume 2
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+- id: 8
+  title: One Punch Man
+  status: ongoing
+  thumbnail: https://upload.wikimedia.org/wikipedia/en/c/c3/OnePunchMan_manga_cover.png
+  group: Other translation group
+  description: Saitama is bored
+  nextRelease: 28/08/2022
+  links:
+    - 
+      name: Volume 1
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
+    - 
+      name: Volume 2
+      url: https://drive.google.com/file/d/1-pSD7nAJZAuXTp0wDdukskMOkJE9NEhh/view?usp=sharing
