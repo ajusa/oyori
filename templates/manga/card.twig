@@ -1,24 +1,24 @@
 <article class="no-padding active page bottom">
-	<div class="grid no-space">
-		<div class="s4">
-			<img class="responsive" src="{{manga.thumbnail}}">
-		</div>
-		<div class="s8">
-			<div class="padding scroll no-round medium-height">
-				<h5>{{manga.title}}</h5>
-				<p class="italic">
-					<i>group</i>
-					{{manga.releaseGroup}}
-				</p>
-				<p class="italic">Status: {{manga.status}}
-				</p>
-			</i>
-			<p class="">{{manga.description}}</p>
-		</div>
-		{% if showLink %}
-			<footer class="fixed padding">
-				<a class="button border center responsive round no-margin" href="/manga/{{manga.id}}">View</a>
-			</footer>
-		{% endif %}
-	</div>
+  <div class="grid no-space">
+    <div class="s4">
+      <img class="responsive" src="{{manga.thumbnail}}">
+    </div>
+    <div class="s8">
+      <div class="padding scroll no-round medium-height">
+        <h5>{{manga.title}}</h5>
+        <p class="italic">
+          <i>group</i>
+          {{manga.releaseGroup}}
+        </p>
+        <p class="italic">Status: {{manga.status}}
+        </p>
+      </i>
+      <p class="">{{manga.description}}</p>
+    </div>
+    {% if showLink %}
+      <footer class="fixed padding">
+        <a class="button border center responsive round no-margin" href="/manga/{{manga.id}}">View</a>
+      </footer>
+    {% endif %}
+  </div>
 </article>

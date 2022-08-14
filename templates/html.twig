@@ -1,81 +1,81 @@
 {% if not request.isBare %}
-	<!DOCTYPE html>
-	<html lang="en">
-		<head>
-			<meta charset="UTF-8">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link href="https://cdn.jsdelivr.net/npm/beercss@2.2.3/dist/cdn/beer.min.css" rel="stylesheet">
-			<script src="https://unpkg.com/htmx.org@1.8.0"></script>
-			<title>Oyori</title>
-			<style>:root
-			,
-			body.light {
-				--primary: #006877;
-				--on-primary: #ffffff;
-				--primary-container: #9cefff;
-				--on-primary-container: #001f25;
-				--secondary: #4a6267;
-				--on-secondary: #ffffff;
-				--secondary-container: #cde7ed;
-				--on-secondary-container: #051f23;
-				--tertiary: #545d7d;
-				--on-tertiary: #ffffff;
-				--tertiary-container: #dae1ff;
-				--on-tertiary-container: #101a37;
-				--error: #ba1b1b;
-				--error-container: #ffdad4;
-				--on-error: #ffffff;
-				--on-error-container: #410001;
-				--background: #fbfdfe;
-				--on-background: #191c1d;
-				--surface: #d7e6ee;
-				--on-surface: #191c1d;
-				--surface-variant: #dbe4e6;
-				--on-surface-variant: #3f484a;
-				--outline: #70797b;
-				--inverse-on-surface: #eff1f2;
-				--inverse-surface: #2d3132;
-				--inverse-primary: #44d8f1;
-				--shadow: #000000;
-			}
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/beercss@2.2.3/dist/cdn/beer.min.css" rel="stylesheet">
+      <script src="https://unpkg.com/htmx.org@1.8.0"></script>
+      <title>Oyori</title>
+      <style>:root
+      ,
+      body.light {
+        --primary: #006877;
+        --on-primary: #ffffff;
+        --primary-container: #9cefff;
+        --on-primary-container: #001f25;
+        --secondary: #4a6267;
+        --on-secondary: #ffffff;
+        --secondary-container: #cde7ed;
+        --on-secondary-container: #051f23;
+        --tertiary: #545d7d;
+        --on-tertiary: #ffffff;
+        --tertiary-container: #dae1ff;
+        --on-tertiary-container: #101a37;
+        --error: #ba1b1b;
+        --error-container: #ffdad4;
+        --on-error: #ffffff;
+        --on-error-container: #410001;
+        --background: #fbfdfe;
+        --on-background: #191c1d;
+        --surface: #d7e6ee;
+        --on-surface: #191c1d;
+        --surface-variant: #dbe4e6;
+        --on-surface-variant: #3f484a;
+        --outline: #70797b;
+        --inverse-on-surface: #eff1f2;
+        --inverse-surface: #2d3132;
+        --inverse-primary: #44d8f1;
+        --shadow: #000000;
+      }
 
-			:root,
-			body.dark {
-				--primary: #53dbc9;
-				--on-primary: #003730;
-				--primary-container: #005047;
-				--on-primary-container: #74f7e5;
-				--secondary: #b1ccc6;
-				--on-secondary: #1c3531;
-				--secondary-container: #334b47;
-				--on-secondary-container: #cde8e2;
-				--tertiary: #adcae6;
-				--on-tertiary: #153349;
-				--tertiary-container: #2d4960;
-				--on-tertiary-container: #cbe5ff;
-				--error: #ffb4a9;
-				--error-container: #930006;
-				--on-error: #680003;
-				--on-error-container: #ffdad4;
-				--background: #191c1b;
-				--on-background: #e0e3e1;
-				--surface: #191c1b;
-				--on-surface: #e0e3e1;
-				--surface-variant: #3f4947;
-				--on-surface-variant: #bfc9c6;
-				--outline: #889390;
-				--inverse-on-surface: #191c1b;
-				--inverse-surface: #e0e3e1;
-				--inverse-primary: #006a5f;
-				--shadow: #000000;
-			}
+      :root,
+      body.dark {
+        --primary: #53dbc9;
+        --on-primary: #003730;
+        --primary-container: #005047;
+        --on-primary-container: #74f7e5;
+        --secondary: #b1ccc6;
+        --on-secondary: #1c3531;
+        --secondary-container: #334b47;
+        --on-secondary-container: #cde8e2;
+        --tertiary: #adcae6;
+        --on-tertiary: #153349;
+        --tertiary-container: #2d4960;
+        --on-tertiary-container: #cbe5ff;
+        --error: #ffb4a9;
+        --error-container: #930006;
+        --on-error: #680003;
+        --on-error-container: #ffdad4;
+        --background: #191c1b;
+        --on-background: #e0e3e1;
+        --surface: #191c1b;
+        --on-surface: #e0e3e1;
+        --surface-variant: #3f4947;
+        --on-surface-variant: #bfc9c6;
+        --outline: #889390;
+        --inverse-on-surface: #191c1b;
+        --inverse-surface: #e0e3e1;
+        --inverse-primary: #006a5f;
+        --shadow: #000000;
+      }
 
-			p {
-				font-size: 1.1em;
-			}
-		</style>
-	</head>
-	<body class="dark">{% importnimja "templates/body.twig" %}</body>
+      p {
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body class="dark">{% importnimja "templates/body.twig" %}</body>
 </html>{% else %}
 {% importnimja "templates/body.twig" %}{% endif %}

@@ -1,32 +1,32 @@
 {% if request.isBare %}
-	{{content}}
+  {{content}}
 {% else %}
-	{% macro selectedPath(path: string, isIndex = false): string = %}
-		{% if path in request.path or (isIndex and request.path == "/")%}
-			primary elevate
-		{% else %}
-			transparent
-		{% endif %}
-	{% endmacro %}
-	<nav class="top elevate" hx-boost="true">
-		<div class="space"></div>
-		{# <img src="logo.png" height="24"> #}
-		<a href="/" class='button large {{selectedPath("index page", isIndex=true)}}'>
-			Home
-		</a>
-		<a href="/manga" class='button large {{selectedPath("manga")}}'>
-			Manga
-		</a>
-		<a href="/post" class='button large {{selectedPath("post")}}'>
-			News
-		</a>
-		<div class="max"></div>
-		<a href="/manga" class='button large {{selectedPath("donate")}}'>
-			Donate
-		</a>
-		<div class="space"></div>
-	</nav>
-	<main class="responsive active bottom page">
-		{{content}}
-	</main>
+  {% macro selectedPath(path: string, isIndex = false): string = %}
+    {% if path in request.path or (isIndex and request.path == "/")%}
+      primary elevate
+    {% else %}
+      transparent
+    {% endif %}
+  {% endmacro %}
+  <nav class="top elevate" hx-boost="true">
+    <div class="space"></div>
+    {# <img src="logo.png" height="24"> #}
+    <a href="/" class='button large {{selectedPath("index page", isIndex=true)}}'>
+      Home
+    </a>
+    <a href="/manga" class='button large {{selectedPath("manga")}}'>
+      Manga
+    </a>
+    <a href="/post" class='button large {{selectedPath("post")}}'>
+      News
+    </a>
+    <div class="max"></div>
+    <a href="/manga" class='button large {{selectedPath("donate")}}'>
+      Donate
+    </a>
+    <div class="space"></div>
+  </nav>
+  <main class="responsive active bottom page">
+    {{content}}
+  </main>
 {% endif %}

@@ -1,14 +1,14 @@
 <div class="field prefix suffix border" id="filter">
-	<i>search</i>
-	<input
-		type="text"
-		name="text"
-		hx-indicator="closest div"
-		hx-target="#results"
-		hx-get="/manga"
-		hx-vars="{'after': 0}"
-		hx-trigger="load, keyup changed delay:300ms">
-	<span class="helper">Search manga by name</span>
-	<a class="htmx-indicator loader"></a>
+  <i>search</i>
+  <input
+    type="text"
+    name="text"
+    hx-indicator="closest div"
+    hx-target="#results"
+    hx-get="/manga"
+    hx-vars="{'after': 0}"
+    hx-trigger="load, keyup changed delay:300ms">
+  <span class="helper">Search manga by name</span>
+  <a class="htmx-indicator loader"></a>
 </div>
 <div id="results" class="grid"></div>
