@@ -1,4 +1,7 @@
-{% if not request.isBare %}
+{% if request.isBare %}
+  {{content}}
+{% else %}
+
   <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -7,41 +10,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/beercss@2.2.3/dist/cdn/beer.min.css" rel="stylesheet">
       <script src="https://unpkg.com/htmx.org@1.8.0"></script>
-			<script src="https://unpkg.com/hyperscript.org@0.9.7"></script>
+      <script src="https://unpkg.com/hyperscript.org@0.9.7"></script>
       <title>Oyori</title>
       <style>:root
       ,
-      body.light {
-        --primary: #006877;
-        --on-primary: #ffffff;
-        --primary-container: #9cefff;
-        --on-primary-container: #001f25;
-        --secondary: #4a6267;
-        --on-secondary: #ffffff;
-        --secondary-container: #cde7ed;
-        --on-secondary-container: #051f23;
-        --tertiary: #545d7d;
-        --on-tertiary: #ffffff;
-        --tertiary-container: #dae1ff;
-        --on-tertiary-container: #101a37;
-        --error: #ba1b1b;
-        --error-container: #ffdad4;
-        --on-error: #ffffff;
-        --on-error-container: #410001;
-        --background: #fbfdfe;
-        --on-background: #191c1d;
-        --surface: #d7e6ee;
-        --on-surface: #191c1d;
-        --surface-variant: #dbe4e6;
-        --on-surface-variant: #3f484a;
-        --outline: #70797b;
-        --inverse-on-surface: #eff1f2;
-        --inverse-surface: #2d3132;
-        --inverse-primary: #44d8f1;
-        --shadow: #000000;
-      }
-
-      :root,
       body.dark {
         --primary: #53dbc9;
         --on-primary: #003730;
@@ -77,6 +49,34 @@
       }
     </style>
   </head>
-  <body class="dark">{% importnimja "templates/body.twig" %}</body>
-</html>{% else %}
-{% importnimja "templates/body.twig" %}{% endif %}
+  <body class="dark">
+    {% macro selectedPath(path: string, isIndex = false): string = %}
+      {% if path in request.path or (isIndex and request.path == "/")%}
+        primary elevate
+      {% else %}
+        transparent
+      {% endif %}
+    {% endmacro %}
+    <nav class="padding elevate row scroll" hx-boost="true">
+      <div class="space m l"></div>
+      {# <img src="logo.png" height="24"> #}
+      <a href="/" class='button {{selectedPath("index page", isIndex=true)}}'>
+        Home
+      </a>
+      <a href="/manga" class='button {{selectedPath("manga")}}'>
+        Manga
+      </a>
+      <a href="/post" class='button {{selectedPath("post")}}'>
+        News
+      </a>
+      <div class="max m l"></div>
+      <a href="/donate" class='button {{selectedPath("donate")}}'>
+        Donate
+      </a>
+      <div class="space m l"></div>
+    </nav>
+    <main class="responsive active bottom page">
+      {{content}}
+    </main>
+  </body>
+</html>{% endif %}

@@ -1,16 +1,33 @@
-{% for manga in mangas %}
-  <div class="s12 m6">
-    {% const showLink = true %}
-    {% importnimja "templates/manga/card.twig" %}
-  </div>
-{% endfor %}
-{% if mangas.len != 0 %}
-  <div
-    class="s12 padding"
-    hx-get="/manga?after={{mangas[^1].id}}"
-    hx-include="#filter"
-    hx-trigger="revealed"
-    hx-swap="outerHTML">
-    <div class="large center loader"></div>
+{% if not request.isBare %}
+  <div class="field prefix suffix border" id="filter">
+    <i>search</i>
+    <input
+      type="text"
+      name="text"
+      hx-indicator="#filter"
+      hx-target="#results"
+      hx-swap="outerHTML"
+      hx-get="/manga"
+      hx-trigger="keyup changed delay:300ms">
+    <span class="helper">Search manga by name</span>
+    <a class="htmx-indicator loader"></a>
   </div>
 {% endif %}
+<div id="results" class="grid">
+  {% for manga in mangas %}
+    <div class="s12 m6">
+      {% const showLink = true %}
+      {% importnimja "templates/manga/card.twig" %}
+    </div>
+  {% endfor %}
+  {% if mangas.len != 0 %}
+    <div
+      class="s12 padding"
+      hx-get="/manga?after={{mangas[^1].id}}"
+      hx-include="#filter"
+      hx-trigger="revealed"
+      hx-swap="outerHTML">
+      <div class="large center loader"></div>
+    </div>
+  {% endif %}
+</div>

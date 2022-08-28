@@ -1,6 +1,8 @@
 # oyori
 a site for organizing manga. Built with Nim, Jester, Nimja, and HTMX.
 
+![](manga.png)
+
 ## Instructions
 
 ```
