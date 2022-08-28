@@ -16,7 +16,7 @@
       <p class="">{{manga.description}}</p>
     </div>
     {% if showLink %}
-      <footer class="fixed padding">
+      <footer class="fixed padding" hx-boost="true">
         <a class="button border center responsive round no-margin" href="/manga/{{manga.id}}">View</a>
       </footer>
     {% endif %}
