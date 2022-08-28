@@ -1,13 +1,13 @@
+{% macro selectedPath(path: string, isIndex = false): string = %}
+  {% if path in request.path or (isIndex and request.path == "/")%}
+    primary elevate
+  {% else %}
+    transparent
+  {% endif %}
+{% endmacro %}
 {% if request.isBare %}
   {{content}}
 {% else %}
-  {% macro selectedPath(path: string, isIndex = false): string = %}
-    {% if path in request.path or (isIndex and request.path == "/")%}
-      primary elevate
-    {% else %}
-      transparent
-    {% endif %}
-  {% endmacro %}
   <nav class="padding elevate row scroll" hx-boost="true">
     <div class="space m l"></div>
     {# <img src="logo.png" height="24"> #}
@@ -21,7 +21,7 @@
       News
     </a>
     <div class="max m l"></div>
-    <a href="/manga" class='button {{selectedPath("donate")}}'>
+    <a href="/donate" class='button {{selectedPath("donate")}}'>
       Donate
     </a>
     <div class="space m l"></div>

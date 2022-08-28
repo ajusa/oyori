@@ -5,6 +5,9 @@ type
   Link* = object
     name*: string
     url*: string
+  Donation* = object
+    name*: string
+    address*: string
   Manga* = ref object of Model
     title*: string
     status*: string
@@ -37,6 +40,8 @@ proc toDownloadUrl*(link: string): string =
   if link.scanf("https://drive.google.com/file/d/$*/", fileId):
     &"https://www.googleapis.com/drive/v3/files/{fileId}/?key={API_KEY}&alt=media"
   else: link
+
+let donations* = loadToJson(readFile("donations.yaml"))[0].toJson().fromJson(seq[Donation])
 
 var mangas = loadToJson(readFile("mangas.yaml"))[0].toJson().fromJson(seq[Manga])
 var posts = loadToJson(readFile("news.yaml"))[0].toJson().fromJson(seq[Post])

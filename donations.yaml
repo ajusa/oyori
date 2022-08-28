@@ -1,0 +1,7 @@
+---
+- name: Bitcoin
+  address: someaddresshere
+- name: ethereum
+  address: ethaddresshere
+- name: dogecoin
+  address: dogedogedoge

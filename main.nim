@@ -13,6 +13,8 @@ proc isBare(request: Request): bool =
 routes:
   get "/":
     respHtmx "<h2>Welcome to Oyori!</h2>"
+  get "/donate":
+    respHtmx tmplf(templates / "donate.twig")
   get "/manga":
     if not request.isBare:
       respHtmx tmplf(templates / "manga" / "filter.twig")

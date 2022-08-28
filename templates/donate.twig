@@ -1,0 +1,15 @@
+{% for donation in donations %}
+  <article>
+    <h5>{{donation.name}}</h5>
+    <p>{{donation.address}}</p>
+    <div class="absolute top right padding">
+      <button
+        class="transparent circle"
+        _="on click writeText(innerText of previous <p/>) into the navigator's clipboard put 'Copied!' into <div/> in me wait 1s
+          put 'Copy' into <div/> in me">
+        <i>content_copy</i>
+        <div class="tooltip">Copy</div>
+      </button>
+    </div>
+  </article>
+{% endfor %}
